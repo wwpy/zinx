@@ -91,6 +91,9 @@ func (connMgr *ConnManager) ClearConn() {
 	fmt.Println("Clear All Connections successfully: conn num = ", connMgr.Len())
 }
 
+/**
+* 获取ConnID链接 并且删除
+ */
 func (connMgr *ConnManager) ClearOneConn(connID uint32) {
 	connections := connMgr.connections.Load().(map[uint32]ziface.IConnection)
 
